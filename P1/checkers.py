@@ -179,7 +179,7 @@ class Checker(TwoPlayerGame):
         white lose if black piece is in black territory
         """
         if self.current_player == 2:
-            return any(piece == 0 for piece in self.players[0].pos)
+            return any(piece[0] == 0 for piece in self.players[0].pos)
         else:
             return any(piece[0] == 7 for piece in self.players[1].pos)
 
